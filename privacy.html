@@ -19,7 +19,7 @@
   </header>
   <main id="main" class="page">
     <h1>隐私说明 <span lang="en">/ Privacy</span></h1>
-    <p class="meta">版本日期 / Version date: 2026-10-07</p>
+    <p class="meta">版本日期 / Version date: 2026-10-23</p>
     <nav class="language-nav" aria-label="语言 / Languages">
       <a href="#zh" lang="zh-CN">中文</a>
       <a href="#en" lang="en">English</a>
@@ -31,7 +31,13 @@
       <h3>你选择提供的视频</h3>
       <p>你通过系统照片或文件选择器选择视频。App 在自己的空间内处理副本，不修改原视频。保存到照片需要添加权限；也可以保存到文件。系统照片或文件服务可能需要下载云端素材，这不等于 SoloFrame 将素材上传给开发者。</p>
       <h3>当前任务与本机记录</h3>
-      <p>App 保存当前任务和少量本机处理记录，用于恢复任务和排查故障。结束任务或成功开始新任务后，会清理 App 内不再使用的任务文件；你已保存到照片或文件的副本不受影响。工作缓存可能被系统清理，请主动保存想保留的成片。</p>
+      <p>App 保存当前任务，以及用于排查故障的有限本机诊断记录。诊断记录不自动上传；你可主动复制诊断信息以联系支持。任务清理与有限诊断记录的保留分别管理。结束任务或成功开始新任务后，会清理 App 内不再使用的任务文件；你已保存到照片或文件的副本不受影响。工作缓存可能被系统清理，请主动保存想保留的成片。</p>
+      <h3>可选的歌曲识别</h3>
+      <p>识歌默认关闭。只有你明确开启后，App 才会在你之后主动开始生成、且 App 处于前台时尝试识别所选范围内的歌曲；导入、浏览、恢复任务或返回前台本身不会开始识歌，也不会扫描历史任务。关闭识歌仍可制作和保存视频。</p>
+      <p>识歌需要联网。App 从已确认的视频范围内选取最多两个、每个不超过 10 秒的音频片段，在本机生成音频指纹，并通过 ShazamKit 向 Apple 发送指纹及请求所需的连接信息（如 IP 地址）进行识别。识歌请求不发送原视频、视频画面或原始音频，也不使用麦克风。必要时，App 还会向 Apple 请求已匹配同一首歌的缺失信息。</p>
+      <p>识别结果可能包含歌名、歌手和 Apple Music 链接，并随当前任务保存在本机，用于显示结果和避免重复请求；App 不将音频指纹保存为任务文件。没有结果、断网或识别失败不阻止视频生成和保存。识别可能不准确，也不保证所有歌曲均能识别。</p>
+      <p>你可在“隐私与支持”关闭自动识歌。关闭会阻止后续识歌请求；已发送的请求无法撤回，关闭不会要求 Apple 删除其已接收的信息。Apple 独立处理服务信息，SoloFrame 不承诺 Apple 不留存信息或某一删除期限。Apple 的隐私政策：<a href="https://www.apple.com/legal/privacy/">https://www.apple.com/legal/privacy/</a> 。其音乐识别隐私说明可提供服务背景：<a href="https://www.apple.com/legal/privacy/">https://www.apple.com/legal/privacy/</a>data/en/music-recognition/ 。其中关于 Apple 自有功能的说明不表示 SoloFrame 使用了这些功能。</p>
+      <p>只有你点击复制时，App 才会把歌名及可用的歌手文字放入系统剪贴板；点击 Apple Music 链接会打开对应歌曲的外部服务，由 Apple 按其规则处理访问。识歌不要求在 SoloFrame 登录或订阅 Apple Music；外部收听受该服务的可用性和订阅规则约束。识别结果不授予音乐或视频的使用、传播权。</p>
       <h3>TestFlight 与主动反馈</h3>
       <p>首轮测试使用 TestFlight 自带反馈。Apple 按其 <a href="https://www.apple.com/legal/privacy/data/en/test-flight/">TestFlight 隐私说明</a>处理测试、崩溃和主动提交的反馈信息。提交的反馈会提供给 Apple 和开发者；本机处理不代表 Apple 的测试服务不处理数据。</p>
       <p>反馈可以只写文字，截图可选，无需提供原视频。请发送前检查截图中他人的信息。通过邮件联系时，开发者会收到你的邮箱地址、正文及你主动附上的附件。反馈只用于排查问题和改进产品，不用于广告、模型训练或公开传播。若排查问题确需视频，会另行说明用途、接收方、留存及删除方式，并征求同意。</p>
@@ -48,7 +54,13 @@
       <h3>Videos you choose to provide</h3>
       <p>You choose a video through the system Photos or Files picker. The app processes a local copy without modifying your original. Saving to Photos requires permission to add videos; saving to Files is also available. A system photo or file provider may download cloud-hosted media. This is separate from SoloFrame sending media to the developer.</p>
       <h3>Current task and local records</h3>
-      <p>The app keeps the current task and limited local processing records for recovery and troubleshooting. Ending a task or successfully starting a new one removes inactive app-owned task files. Copies you saved to Photos or Files are unaffected. The system may remove working caches, so save results you want to keep.</p>
+      <p>The app keeps the current task and bounded local diagnostic records for troubleshooting. Diagnostics are not uploaded automatically; you can choose to copy diagnostic information to contact support. Task cleanup and retention of bounded diagnostics are managed separately. Ending a task or successfully starting a new one removes inactive app-owned task files. Copies you saved to Photos or Files are unaffected. The system may remove working caches, so save results you want to keep.</p>
+      <h3>Optional song identification</h3>
+      <p>Song identification is off by default. Only after you explicitly enable it does the app attempt to identify music from the confirmed range when you later start generation with the app in the foreground. Importing, browsing, restoring a task, or returning to the foreground does not start identification or scan past tasks. You can create and save videos with song identification off.</p>
+      <p>Identification requires an internet connection. The app selects up to two audio clips from the confirmed video range, each no longer than 10 seconds, creates audio fingerprints on your device, and sends the fingerprints and connection information needed for the request, such as your IP address, to Apple through ShazamKit. Recognition requests do not send your original video, video frames, or raw audio, and do not use the microphone. If necessary, the app also asks Apple for missing information about the same matched song.</p>
+      <p>Results may include the title, artist, and an Apple Music link. They are stored locally with the current task to display the result and avoid repeated requests; the app does not save audio fingerprints as task files. Video generation and saving remain available if there is no match, no connection, or an identification failure. Results may be inaccurate, and not every song can be identified.</p>
+      <p>You can turn off automatic identification in Privacy &amp; Support. This blocks subsequent recognition requests; requests already sent cannot be recalled, and turning it off does not ask Apple to delete information it has received. Apple handles service information independently. SoloFrame does not promise that Apple retains no information or deletes it within a particular period. Apple Privacy Policy: <a href="https://www.apple.com/legal/privacy/">https://www.apple.com/legal/privacy/</a> . Its Music Recognition privacy notice provides service background: <a href="https://www.apple.com/legal/privacy/">https://www.apple.com/legal/privacy/</a>data/en/music-recognition/ . Descriptions of Apple’s own features there do not mean SoloFrame uses those features.</p>
+      <p>Only when you tap Copy does the app place the title and available artist text on the system clipboard. Tapping an Apple Music link opens the corresponding song in an external service, where Apple handles the visit under its own rules. Identification does not require signing in to SoloFrame or subscribing to Apple Music; external listening is subject to that service’s availability and subscription rules. Recognition does not grant rights to use or distribute music or videos.</p>
       <h3>TestFlight and voluntary feedback</h3>
       <p>The first beta uses TestFlight’s built-in feedback. Apple processes testing, crash, and voluntarily submitted feedback information under its <a href="https://www.apple.com/legal/privacy/data/en/test-flight/">TestFlight privacy notice</a>. Submitted feedback is provided to Apple and the developer. On-device processing does not mean Apple’s testing service processes no data.</p>
       <p>Text-only feedback is welcome; screenshots are optional and original footage is not required. Check screenshots for other people’s information before sending. If you contact support by email, the developer receives your email address, message, and any attachments you choose to send. Feedback is used only for troubleshooting and product improvement, not advertising, model training, or public sharing. Any separate request for video will explain its purpose, recipient, retention, and deletion arrangements and ask for your consent.</p>
